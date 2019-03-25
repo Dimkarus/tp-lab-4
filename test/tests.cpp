@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../include/auto.h"
+#include "auto.h"
 
 TEST(lab4, task_1) {
 	std::vector<std::string> menu = { "Cap", "Tea", "Coffe","Espresso" };
