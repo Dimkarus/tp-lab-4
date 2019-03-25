@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../include/auto.h"
+#include "auto.h"
 
 TEST(lab4, task_1) {
 	std::vector<std::string> menu = { "Cap", "Tea", "Coffe","Espresso" };
@@ -19,8 +19,8 @@ TEST(lab4, task_2) {
     tmp.on();
     tmp.coin(31.0);
 
-    bool test = tmp.check(0);
-    EXPECT_EQ(0, tmp);
+    bool test = tmp.check(price[0]);
+    EXPECT_EQ(1, tmp);
 }
 
 
