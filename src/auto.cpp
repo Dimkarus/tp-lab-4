@@ -21,7 +21,7 @@ void Automata::coin(double mon) {
 	this->state = ACCEPT;
 	double money = mon;
 	std::cout << "Ââåäèòå ñðåäñòâà" << std::endl;
-	std::cin >> money;
+	//std::cin >> money;
 	if (money < 0) {
 		std::cout << "Îøèáêà ââîäà äåíåæíûõ ñðåäñòâ" << std::endl;
 		coin();
