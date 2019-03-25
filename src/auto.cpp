@@ -83,6 +83,8 @@ bool Automata::check(double tmp_price) {
 
 void Automata::finish() {
 	this->state = WAIT;
+	std::cout<<"Your cash: " << this->cash << std::endl;
+	this->cash = 0;
 }
 
 void Automata::cook(const std::string &tmp_menu) {
