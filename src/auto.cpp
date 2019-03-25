@@ -17,13 +17,13 @@ void Automata::off() {
 	this->state = OFF;
 }
 
-void Automata::coin() {
+void Automata::coin(double mon) {
 	this->state = ACCEPT;
-	double money;
-	std::cout << "Ââåäèòå ñðåäñòâà" << std::endl;
+	double money = mon;
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã°Ã¥Ã¤Ã±Ã²Ã¢Ã " << std::endl;
 	std::cin >> money;
 	if (money < 0) {
-		std::cout << "Îøèáêà ââîäà äåíåæíûõ ñðåäñòâ" << std::endl;
+		std::cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¢Ã¢Ã®Ã¤Ã  Ã¤Ã¥Ã­Ã¥Ã¦Ã­Ã»Ãµ Ã±Ã°Ã¥Ã¤Ã±Ã²Ã¢" << std::endl;
 		coin();
 	}
 	else {
@@ -34,22 +34,22 @@ void Automata::coin() {
 
 void Automata::printMenu() {
 	for (size_t i = 0; i < this->price.size(); ++i) {
-		std::cout << i + 1 << " - " << this->menu[i] << " - " << this->price[i] << "ðóá." << std::endl;
+		std::cout << i + 1 << " - " << this->menu[i] << " - " << this->price[i] << "Ã°Ã³Ã¡." << std::endl;
 	}
 }
 
 void Automata::printState() {
 	switch (state) {
 	case OFF:
-		std::cout << "Âûêëþ÷åíî";
+		std::cout << "Ã‚Ã»ÃªÃ«Ã¾Ã·Ã¥Ã­Ã®";
 	case WAIT:
-		std::cout << "Îæèäàíèå";
+		std::cout << "ÃŽÃ¦Ã¨Ã¤Ã Ã­Ã¨Ã¥";
 	case ACCEPT:
-		std::cout << "Ïðè¸ì äåíåã";
+		std::cout << "ÃÃ°Ã¨Â¸Ã¬ Ã¤Ã¥Ã­Ã¥Ã£";
 	case CHECK:
-		std::cout << "Ïðîâåðêà íàëè÷íîñòè";
+		std::cout << "ÃÃ°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã­Ã Ã«Ã¨Ã·Ã­Ã®Ã±Ã²Ã¨";
 	case COOK:
-		std::cout << "Ïðèãîòîâëåíèå";
+		std::cout << "ÃÃ°Ã¨Ã£Ã®Ã²Ã®Ã¢Ã«Ã¥Ã­Ã¨Ã¥";
 	}
 	std::cout << std::endl;
 }
@@ -58,11 +58,11 @@ void Automata::printState() {
 void Automata::choice() {
 	this->state = CHECK;
 	int tmp;
-	std::cout << "Âûáåðèòå íàïèòîê" << std::endl;
+	std::cout << "Ã‚Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã­Ã Ã¯Ã¨Ã²Ã®Ãª" << std::endl;
 	printMenu();
 	std::cin >> tmp;
 	if (tmp == 0 || tmp > this->menu.size()) {
-		std::cout << "Íåâåðíûé ââîä" << std::endl;
+		std::cout << "ÃÃ¥Ã¢Ã¥Ã°Ã­Ã»Ã© Ã¢Ã¢Ã®Ã¤" << std::endl;
 	}
 	else {
 		if (check(price[tmp - 1])) {
@@ -70,7 +70,7 @@ void Automata::choice() {
 			cook(menu[tmp - 1]);
 		}
 		else {
-			std::cout << "Íåäîñòàòî÷íî ñðåäñòâ" << std::endl;
+			std::cout << "ÃÃ¥Ã¤Ã®Ã±Ã²Ã Ã²Ã®Ã·Ã­Ã® Ã±Ã°Ã¥Ã¤Ã±Ã²Ã¢" << std::endl;
 			coin();
 			choice();
 		}
@@ -87,7 +87,7 @@ void Automata::finish() {
 
 void Automata::cook(const std::string &tmp_menu) {
 	this->state = COOK;
-	std::cout << "Ïðèãîòîâëåíèå " << tmp_menu << std::endl;
+	std::cout << "ÃÃ°Ã¨Ã£Ã®Ã²Ã®Ã¢Ã«Ã¥Ã­Ã¨Ã¥ " << tmp_menu << std::endl;
 	finish();
 }
 
