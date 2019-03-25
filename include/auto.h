@@ -24,7 +24,7 @@ public:
 		const std::vector<std::string> &tmp_menu);
 	void on();
 	void off();
-	void coin();
+	void coin(double mon);
 	void printMenu();
 	void printState();
 	void cancel();
