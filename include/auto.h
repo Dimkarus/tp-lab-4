@@ -8,8 +8,8 @@ class Automata
 {
 private:
 
-	std::vector<int> price;
-	std::vector<std::string> menu;
+	std::vector<std::string> menu = { "Cap", "Tea", "Coffe","Espresso" };
+	std::vector<int> price = { 30, 20, 25, 35 };
 	int cash;
 	enum STATES {
 		OFF,
@@ -20,8 +20,7 @@ private:
 	};
 	STATES state;
 public:
-	Automata(const std::vector<int> &tmp_price,
-		const std::vector<std::string> &tmp_menu);
+	Automata();
 	void on();
 	void off();
 	void coin(int mon);
