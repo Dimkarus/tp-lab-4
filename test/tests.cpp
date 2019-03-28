@@ -6,7 +6,7 @@ TEST(lab4, task_1) {
     tmp.on();
     tmp.coin(10);
 
-    bool test = tmp.check(30);
+    int test = tmp.check(30);
     EXPECT_EQ(0, tmp);
 }
 
@@ -15,7 +15,7 @@ TEST(lab4, task_2) {
     tmp.on();
     tmp.coin(31);
 
-    bool test = tmp.check(30);
+    int test = tmp.check(30);
     EXPECT_EQ(1, tmp);
 }
 
