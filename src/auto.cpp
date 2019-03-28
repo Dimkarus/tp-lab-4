@@ -1,10 +1,7 @@
 #include "auto.h"
 
 
-Automata::Automata(const std::vector<int> &tmp_price,
-	const std::vector<std::string> &tmp_menu) {
-	this->price = tmp_price;
-	this->menu = tmp_menu;
+Automata::Automata() {
 	this->cash = 0;
 	this->state = OFF;
 }
