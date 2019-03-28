@@ -24,7 +24,7 @@ void Automata::coin(int mon) {
 	//std::cin >> money;
 	if (money < 0) {
 		std::cout << "Îøèáêà ââîäà äåíåæíûõ ñðåäñòâ" << std::endl;
-		coin();
+		coin(0);
 	}
 	else {
 		this->cash += money;
