@@ -2,9 +2,7 @@
 #include "auto.h"
 
 TEST(lab4, task_1) {
-	std::vector<std::string> menu = { "Cap", "Tea", "Coffe","Espresso" };
-	std::vector<int> price = { 30, 20, 25, 35 };
-	Automata tmp(price, menu);
+	Automata tmp;
     tmp.on();
     tmp.coin(10);
 
@@ -13,9 +11,7 @@ TEST(lab4, task_1) {
 }
 
 TEST(lab4, task_2) {
-	std::vector<std::string> menu = { "Cap", "Tea", "Coffe","Espresso" };
-	std::vector<int> price = { 30, 20, 25, 35 };
-	Automata tmp(price, menu);
+	Automata tmp;
     tmp.on();
     tmp.coin(31);
 
