@@ -71,7 +71,7 @@ void Automata::choice() {
 		}
 		else {
 			std::cout << "Íåäîñòàòî÷íî ñðåäñòâ" << std::endl;
-			coin();
+			coin(0);
 			choice();
 		}
 	}
