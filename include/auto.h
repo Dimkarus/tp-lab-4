@@ -8,9 +8,9 @@ class Automata
 {
 private:
 
-	std::vector<double> price;
+	std::vector<int> price;
 	std::vector<std::string> menu;
-	double cash;
+	int cash;
 	enum STATES {
 		OFF,
 		WAIT,
@@ -20,16 +20,16 @@ private:
 	};
 	STATES state;
 public:
-	Automata(const std::vector<double> &tmp_price,
+	Automata(const std::vector<int> &tmp_price,
 		const std::vector<std::string> &tmp_menu);
 	void on();
 	void off();
-	void coin(double mon);
+	void coin(int mon);
 	void printMenu();
 	void printState();
 	void cancel();
 	void choice();
-	bool check(double tmp_price);
+	bool check(int tmp_price);
 	void cook(const std::string &tmp_menu);
 	void finish();
 };
