@@ -1,11 +1,11 @@
 #include "auto.h"
 
 
-Automata::Automata(const std::vector<double> &tmp_price,
+Automata::Automata(const std::vector<int> &tmp_price,
 	const std::vector<std::string> &tmp_menu) {
 	this->price = tmp_price;
 	this->menu = tmp_menu;
-	this->cash = 0.0;
+	this->cash = 0;
 	this->state = OFF;
 }
 
@@ -17,9 +17,9 @@ void Automata::off() {
 	this->state = OFF;
 }
 
-void Automata::coin(double mon) {
+void Automata::coin(int mon) {
 	this->state = ACCEPT;
-	double money = mon;
+	int money = mon;
 	std::cout << "Ââåäèòå ñðåäñòâà" << std::endl;
 	//std::cin >> money;
 	if (money < 0) {
@@ -77,7 +77,7 @@ void Automata::choice() {
 	}
 }
 
-bool Automata::check(double tmp_price) {
+bool Automata::check(int tmp_price) {
 	return tmp_price <= this->cash;
 }
 
