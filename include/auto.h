@@ -27,7 +27,7 @@ public:
 	void printMenu();
 	void printState();
 	void cancel();
-	void choice();
+	void choice(int tmp_choice);
 	bool check(int tmp_price);
 	void cook(const std::string &tmp_menu);
 	void finish();
