@@ -7,7 +7,7 @@ TEST(lab4, task_1) {
     tmp.coin(10);
 
     int test = tmp.check(30);
-    EXPECT_EQ(0, tmp);
+    EXPECT_EQ(0, test);
 }
 
 TEST(lab4, task_2) {
@@ -16,7 +16,7 @@ TEST(lab4, task_2) {
     tmp.coin(31);
 
     int test = tmp.check(30);
-    EXPECT_EQ(1, tmp);
+    EXPECT_EQ(1, test);
 }
 
 TEST(lab4, task_3) {
