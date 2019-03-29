@@ -25,7 +25,6 @@ void Automata::coin(int mon) {
 	}
 	else {
 		this->cash += money;
-		choice();
 	}
 }
 
