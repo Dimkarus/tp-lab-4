@@ -52,12 +52,13 @@ void Automata::printState() {
 }
 
 
-void Automata::choice() {
+void Automata::choice(int tmp_choice) {
 	this->state = CHECK;
 	int tmp;
 	std::cout << "Âûáåðèòå íàïèòîê" << std::endl;
 	printMenu();
-	std::cin >> tmp;
+	//std::cin >> tmp;
+	tmp = tmp_choice;
 	if (tmp == 0 || tmp > this->menu.size()) {
 		std::cout << "Íåâåðíûé ââîä" << std::endl;
 	}
@@ -68,8 +69,7 @@ void Automata::choice() {
 		}
 		else {
 			std::cout << "Íåäîñòàòî÷íî ñðåäñòâ" << std::endl;
-			coin(0);
-			choice();
+			cancel();
 		}
 	}
 }
